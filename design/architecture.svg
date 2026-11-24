@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="680" viewBox="0 0 1000 680">
+<rect width="1000" height="680" fill="#ffffff"/>
+<text x="500" y="40" font-family="Arial" font-size="28" font-weight="bold" fill="#153456" text-anchor="middle">SmartStudy: Browser-Based Modular Architecture</text>
+<text x="500" y="68" font-family="Arial" font-size="15" fill="#50697f" text-anchor="middle">All components run locally; no remote server, account, or cloud database</text>
+<rect x="315" y="100" width="370" height="70" rx="12" fill="#e7eff7" stroke="#50749a" stroke-width="2"/>
+<text x="500" y="130" font-family="Arial" font-size="19" font-weight="bold" fill="#163a5a" text-anchor="middle">Student in browser</text>
+<text x="500" y="152" font-family="Arial" font-size="13" fill="#284762" text-anchor="middle">Adds tasks, views ranking and schedule</text>
+<path d="M500 170 V205" stroke="#54718b" stroke-width="2.6" fill="none"/>
+<path d="M492 197 L500 210 L508 197" fill="none" stroke="#54718b" stroke-width="2.6"/>
+<rect x="250" y="213" width="500" height="96" rx="13" fill="#e3f3eb" stroke="#36906e" stroke-width="2"/>
+<text x="500" y="246" font-family="Arial" font-size="20" font-weight="bold" text-anchor="middle" fill="#165a43">Presentation</text>
+<text x="500" y="270" font-family="Arial" font-size="17" text-anchor="middle" fill="#165a43">index.html + styles.css</text>
+<text x="500" y="292" font-family="Arial" font-size="13" text-anchor="middle" fill="#3a6556">Forms • task cards • priority explanations • daily plan</text>
+<path d="M500 309 V346" stroke="#54718b" stroke-width="2.6" fill="none"/>
+<path d="M492 337 L500 350 L508 337" fill="none" stroke="#54718b" stroke-width="2.6"/>
+<rect x="250" y="354" width="500" height="86" rx="13" fill="#e6e7fb" stroke="#6967af" stroke-width="2"/>
+<text x="500" y="386" font-family="Arial" font-size="20" font-weight="bold" text-anchor="middle" fill="#33316d">Application controller</text>
+<text x="500" y="410" font-family="Arial" font-size="17" text-anchor="middle" fill="#33316d">app.js — validation, CRUD, rendering, persistence calls</text>
+<path d="M435 440 V481 H250 V498" stroke="#54718b" stroke-width="2.6" fill="none"/>
+<path d="M565 440 V481 H750 V498" stroke="#54718b" stroke-width="2.6" fill="none"/>
+<path d="M242 489 L250 502 L258 489 M742 489 L750 502 L758 489" fill="none" stroke="#54718b" stroke-width="2.6"/>
+<rect x="70" y="504" width="360" height="112" rx="13" fill="#f8eddf" stroke="#c59355" stroke-width="2"/>
+<text x="250" y="538" font-family="Arial" font-size="20" font-weight="bold" text-anchor="middle" fill="#714c17">Planning engine</text>
+<text x="250" y="563" font-family="Arial" font-size="17" text-anchor="middle" fill="#714c17">planner.js</text>
+<text x="250" y="589" font-family="Arial" font-size="14" text-anchor="middle" fill="#714c17">Validation • scores • ranking • scheduling</text>
+<rect x="570" y="504" width="360" height="112" rx="13" fill="#edf0f3" stroke="#667582" stroke-width="2"/>
+<text x="750" y="538" font-family="Arial" font-size="20" font-weight="bold" text-anchor="middle" fill="#3b4d5c">Local persistence</text>
+<text x="750" y="563" font-family="Arial" font-size="17" text-anchor="middle" fill="#3b4d5c">Browser localStorage</text>
+<text x="750" y="589" font-family="Arial" font-size="14" text-anchor="middle" fill="#3b4d5c">Tasks + daily availability (same browser)</text>
+<text x="500" y="657" font-family="Arial" font-size="13" text-anchor="middle" fill="#617083">app.js calls planner.js functions and reads/writes localStorage; the interface displays results.</text>
+</svg>
