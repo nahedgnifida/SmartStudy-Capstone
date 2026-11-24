@@ -1,0 +1,8 @@
+Recorded using local Git; remote hosting is not yet connected.
+
+development 863041d Add deadline-baseline and daily-capacity evaluation tests
+* main        adb3e95 Document requirements and modular architecture
+
+863041d (development) Add deadline-baseline and daily-capacity evaluation tests
+adb3e95 (HEAD -> main) Document requirements and modular architecture
+3cb460c Add SmartStudy browser prototype and initial logic tests
