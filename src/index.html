@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="SmartStudy: a local, explainable academic planning prototype.">
+  <title>SmartStudy | Academic Task Planner</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="app-header">
+    <div class="shell header-content">
+      <div class="brand"><div class="logo-mark" aria-hidden="true">S</div><div><strong>SmartStudy</strong><small>Academic Planning, Simplified</small></div></div>
+      <div class="header-actions"><span class="local-chip"><span class="dot"></span> Stored on this device</span><button class="btn btn-light btn-small" id="demo-btn" type="button">Load sample tasks</button></div>
+    </div>
+  </header>
+  <main class="shell" id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div><p class="eyebrow">STUDENT WORKSPACE</p><h1 id="hero-title">A clearer plan for every assignment.</h1><p>Organize coursework, understand what matters most, and plan a realistic study week.</p></div>
+      <div class="hero-side"><span class="hero-symbol" aria-hidden="true">✓</span><span>Simple rules.<br>Clear decisions.</span></div>
+    </section>
+    <div role="status" aria-live="polite" class="toast" id="status-message" hidden></div>
+    <section class="summary-row" aria-label="Study plan summary">
+      <div class="metric"><span>Open tasks</span><strong id="metric-open">0</strong><small>To work on</small></div>
+      <div class="metric"><span>Due in 7 days</span><strong id="metric-due">0</strong><small>Upcoming deadlines</small></div>
+      <div class="metric"><span>Study hours planned</span><strong id="metric-planned">0h</strong><small>Over the next 7 days</small></div>
+      <div class="metric metric-alert"><span>Hours not scheduled</span><strong id="metric-unscheduled">0h</strong><small>Before deadlines</small></div>
+    </section>
+    <div class="main-grid">
+      <section class="panel" aria-labelledby="task-form-heading">
+        <div class="panel-title"><div><p class="section-kicker">01 / ORGANIZE</p><h2 id="task-form-heading">Add an assignment</h2></div></div>
+        <p class="panel-lede">Enter the details below. Your tasks stay in this browser until you clear them.</p>
+        <form id="task-form" novalidate>
+          <input type="hidden" id="editing-id">
+          <div class="field"><label for="task-title">Assignment name</label><input id="task-title" name="title" maxlength="90" required placeholder="e.g., Unit 4 project demo"></div>
+          <div class="field"><label for="task-course">Course</label><input id="task-course" name="course" maxlength="50" required placeholder="e.g., MSIT 5910"></div>
+          <div class="form-duo"><div class="field"><label for="task-date">Due date</label><input type="date" id="task-date" name="date" required></div><div class="field"><label for="task-hours">Estimated hours</label><input type="number" id="task-hours" name="hours" value="2" min="0.5" max="100" step="0.5" required></div></div>
+          <div class="field"><label for="task-importance">Importance</label><select id="task-importance" name="importance"><option value="high">High</option><option value="medium" selected>Medium</option><option value="low">Low</option></select></div>
+          <p class="form-error" id="form-error" role="alert" hidden></p>
+          <div class="form-actions"><button class="btn btn-primary" id="submit-task" type="submit">Add assignment</button><button class="btn btn-ghost" id="cancel-edit" type="button" hidden>Cancel edit</button></div>
+        </form>
+        <div class="info-note"><strong>Privacy by design</strong><span>No account, server, or student ID is needed. Avoid entering private or sensitive details on a shared computer.</span></div>
+      </section>
+      <section class="panel" aria-labelledby="tasks-heading">
+        <div class="panel-title title-with-action"><div><p class="section-kicker">02 / PRIORITIZE</p><h2 id="tasks-heading">Your task priorities</h2></div><button class="text-action" id="clear-btn" type="button">Clear all</button></div>
+        <p class="panel-lede">Scores use <strong>urgency + importance + effort</strong>. Higher numbers appear first.</p>
+        <div class="tasks-list" id="tasks-list" aria-live="polite"></div>
+      </section>
+    </div>
+    <section class="panel planner-panel" aria-labelledby="planner-heading">
+      <div class="panel-title"><div><p class="section-kicker">03 / PLAN</p><h2 id="planner-heading">Your next seven days</h2></div><div class="subtle-pill">Capacity-aware scheduling</div></div>
+      <p class="panel-lede">Set your available hours. SmartStudy assigns tasks before their due dates in half-hour steps. The scheduling order may differ from the priority list because deadlines are respected first.</p>
+      <div class="capacity-grid" id="capacity-grid" aria-label="Available study hours by day"></div>
+      <h3 class="subheading">Suggested study schedule</h3>
+      <div class="week-grid" id="schedule-grid"></div>
+      <div class="warnings" id="warnings" aria-live="polite"></div>
+    </section>
+    <footer><span>SmartStudy · MSIT 5910 capstone prototype</span><span>Rule-based recommendations, not guaranteed academic outcomes.</span></footer>
+  </main>
+  <script src="planner.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
